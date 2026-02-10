@@ -1,16 +1,44 @@
-#nome = input("Digite seu nome: ")
-#print("Olá, ", nome ,"Seja bem vindo")
+while True:
+    entrada = input("Digite sua idade: ")
+    
+    try:
+        idade = int(entrada)
+        if idade <= 0:
+            print("Erro: A idade deve ser maior que zero.")
+        else:
+            print(f"Idade válida: {idade}")
+            break 
+    except ValueError:
+        print("Erro: Digite apenas números, letras não são permitidas.")
 
-nome = input("Digite seu nome: ")
-("Olá, meu nome é Mariana ", "Seja bem vindo")
-print ("Olá, meu nome é: Maria Rita, seja bem vinda! ")
+while True:
+    usuario = input("Crie um nome de usuário: ").strip()
+    if not usuario:
+        print("Erro: O campo de usuário não pode estar vazio.")
+    else:
+        break
 
-nome = input("Digite seu nome: ")
-("Olá, ", nome ,"Seja bem vindo")
-print ("Olá, qual sua idade: tenho 14 anos")
+while True:
+    senha = input("Crie uma senha (mínimo 6 caracteres): ")
+    if len(senha) < 6:
+        print("Erro: A senha deve ter pelo menos 6 caracteres.")
+    else:
+        break
 
-num1 = int(input("Digite sua idade "))
-num2 = int(input("Digite sua idade novamente "))
+print("Login cadastrado com sucesso!")
 
+while True:
+    try:
+        valor = float(input("Digite o valor do saque: R$ "))
+        
+        if valor <= 0:
+            print("Erro: O valor deve ser positivo.")
+        elif valor > 1000:
+            print("Erro: O limite máximo por saque é de R$ 1000,00.")
+        else:
+            print(f"Saque de R$ {valor:.2f} realizado com sucesso!")
+            break
+    except ValueError:
+        print("Erro: Por favor, insira um valor numérico válido.")
 
-
+        
