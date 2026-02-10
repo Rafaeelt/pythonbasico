@@ -1,0 +1,16 @@
+#nome = input("Digite seu nome: ")
+#print("Olá, ", nome ,"Seja bem vindo")
+
+nome = input("Digite seu nome: ")
+("Olá, meu nome é Mariana ", "Seja bem vindo")
+print ("Olá, meu nome é: Maria Rita, seja bem vinda! ")
+
+nome = input("Digite seu nome: ")
+("Olá, ", nome ,"Seja bem vindo")
+print ("Olá, qual sua idade: tenho 14 anos")
+
+num1 = int(input("Digite sua idade "))
+num2 = int(input("Digite sua idade novamente "))
+
+
+
