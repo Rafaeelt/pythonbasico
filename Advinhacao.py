@@ -56,20 +56,37 @@ for rodada in range(1, total_tentativas + 1):
     if not chute_str.isdigit():
         print(VERMELHO+ "Digite um número entre 1 e 100: "+RESET)
         continue
+    
+    if chute == numero__secreto:
+        print(VERDE+"\n Você Acertou! "+RESET)
+        print(VERDE+ f" Sua pontuação foi: {pontos} pontos "+RESET)
+        break
+    else:
+        pontos -=20
+        if chute > numero_secreto:
+            print(VERMELHO+"O número secreto é MAIOR"+RESET)
+        else:
+            print(VERMELHO+"O número secreto é MAIOR"+RESET)
+else:
+    print(VERMELHO+ f"\n Você perdeu! o número secreto era {numero_secreto}"+RESET)
+print
+while True:
+        jogar()
+        repetir = input("\n Deseja jogar novamente?  (s/n)").lower()
 
-    chute = int(chute_str)
+     chute = int(chute_str)
 
-    if(chute < 1 or chute > 100):
+if(chute < 1 or chute > 100):
 
-for rodada in range(1, total_tentativas + 1):
-    print("Tentativa {} de {}".format(rodada,total_tentativas))
+    for rodada in range(1, total_tentativas + 1):
+        print("Tentativa {} de {}".format(rodada,total_tentativas))
 
     chute_str = input("Digite o seu numero: ")
     chute = int(chute_str)
 
     if(chute<1 or chute > 50):
        print("Você deve digitar entre um número 1 e 50! ")
-       continue
+    continue
      
     acertou = chute == numero_secreto
     maior = chute > numero_secreto
@@ -84,5 +101,4 @@ for rodada in range(1, total_tentativas + 1):
         elif(menor):
           print("O seu chute foi menor que o número_secreto")
 
-print("Fim de jogo!")
 
